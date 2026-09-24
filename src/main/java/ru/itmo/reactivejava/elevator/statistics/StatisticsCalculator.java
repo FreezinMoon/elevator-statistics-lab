@@ -81,11 +81,4 @@ public final class StatisticsCalculator {
         return events.stream().collect(CUSTOM_COLLECTOR);
     }
 
-    public static FleetStatistics calculateWithParallelCustomCollector(
-            List<ElevatorTelemetry> events
-    ) {
-        Objects.requireNonNull(events, "events");
-        return events.parallelStream().collect(CUSTOM_COLLECTOR);
-    }
 }
-
